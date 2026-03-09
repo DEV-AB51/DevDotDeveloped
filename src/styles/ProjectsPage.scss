@@ -1,0 +1,164 @@
+@import './main.scss';
+
+.projects-page {
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transition: border-color 0.3s ease;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+
+    &.github {
+      background-color: #333;
+      color: white;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+
+    &.live {
+      background-color: var(--primary-color);
+      color: var(--light-text-color);
+
+      &:hover {
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+
+  .project-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .project-description {
+    padding: 2rem;
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-top: 0;
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+  }
+
+  .project-video {
+    padding: 0 2rem 2rem;
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: box-shadow 0.3s ease;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media screen and (max-width: 768px) {
+    .project-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+
+      h2 {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .project-image {
+      height: 250px;
+    }
+
+    .project-description, 
+    .project-video {
+      padding: 1.5rem;
+    }
+  }
+} 

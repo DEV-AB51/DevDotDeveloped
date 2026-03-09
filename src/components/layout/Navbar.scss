@@ -1,0 +1,202 @@
+@import '../../styles/main.scss';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--card-bg-color);
+  padding: 1rem 0;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  border-bottom: 1px solid var(--border-color);
+
+  &.scrolled {
+    box-shadow: var(--box-shadow);
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+
+    &-icon {
+      margin-right: 0.5rem;
+      font-size: 1.75rem;
+    }
+  }
+
+  &-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    z-index: 1002; /* Ensure toggle is above overlay and menu */
+    transition: color 0.3s ease;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    list-style: none;
+
+    @include tablet {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--background-color);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--box-shadow);
+      padding: 2rem 0;
+      z-index: 1001; /* Ensure menu is above overlay */
+
+      &.active {
+        right: 0;
+
+        .navbar-item {
+          opacity: 0;
+          animation: fadeInRight 0.5s forwards;
+
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              animation-delay: 0.1s * $i;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-item {
+    margin: 0 1rem;
+
+    @include tablet {
+      margin: 0.75rem 0;
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  &-link {
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--primary-color);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @include tablet {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: var(--border-radius);
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      background-color: rgba(0, 119, 182, 0.05);
+      border: 1px solid rgba(0, 119, 182, 0.1);
+
+      [data-theme="dark"] & {
+        background-color: rgba(0, 168, 232, 0.05);
+        border: 1px solid rgba(0, 168, 232, 0.1);
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &:hover, &:active, &:focus, &.touched {
+        background-color: var(--primary-color);
+        color: var(--light-text-color);
+        transform: translateY(-3px);
+        box-shadow: var(--box-shadow);
+        border-color: var(--primary-color);
+      }
+    }
+  }
+
+  &-item.active &-link {
+    color: var(--primary-color);
+
+    &::after {
+      width: 100%;
+    }
+
+    @include tablet {
+      background-color: var(--primary-color);
+      color: var(--light-text-color);
+    }
+  }
+
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Below the menu but above everything else */
+    animation: fadeIn 0.3s ease;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+
+    [data-theme="dark"] & {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 

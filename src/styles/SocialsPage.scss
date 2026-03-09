@@ -1,0 +1,149 @@
+@import './main.scss';
+
+.socials-page {
+  .socials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    p {
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      transition: color 0.3s ease;
+    }
+  }
+
+  .social-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: white;
+
+    &.linkedin {
+      background-color: #0077b5;
+    }
+
+    &.twitter {
+      background-color: #1da1f2;
+    }
+
+    &.github {
+      background-color: #333;
+    }
+  }
+
+  .social-btn {
+    padding: 0.6rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+  }
+
+  .email-cta {
+    margin-top: 3rem;
+    padding: 3rem;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    h2 {
+      margin: 1rem 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      max-width: 500px;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    .email-icon {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: var(--hover-bg-color);
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      box-shadow: var(--box-shadow);
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-btn {
+      padding: 1rem 2.5rem;
+      background-color: var(--primary-color);
+      color: var(--light-text-color);
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media screen and (max-width: 768px) {
+    .socials-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto 2rem;
+    }
+
+    .email-cta {
+      padding: 2rem;
+    }
+  }
+} 

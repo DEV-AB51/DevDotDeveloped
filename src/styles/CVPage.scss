@@ -1,0 +1,138 @@
+@import './main.scss';
+
+.cv-page {
+  // We'll use the default 8rem top padding from PageStyles
+  // to ensure proper spacing from the navbar
+
+  .page-header {
+    margin-bottom: 3rem;
+    // Remove extra top margin as PageStyles already provides 8rem padding
+  }
+
+  .cv-preview-section {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .cv-preview-header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: border-color 0.3s ease;
+
+    h2 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    p {
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+  }
+
+  .cv-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--hover-bg-color);
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .cv-preview-container {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease;
+  }
+
+  .cv-preview-image {
+    max-width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+  }
+
+  .download-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+    p {
+      margin: 0;
+      font-weight: 500;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+  }
+
+  .download-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .download-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border-radius: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+  }
+
+  // Responsive adjustments
+  @media screen and (max-width: 768px) {
+    .cv-preview-section {
+      padding: 0;
+    }
+
+    .cv-preview-header {
+      padding: 1.5rem;
+    }
+
+    .cv-preview-container {
+      padding: 1rem;
+    }
+
+    .download-section {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem 1rem;
+    }
+  }
+} 

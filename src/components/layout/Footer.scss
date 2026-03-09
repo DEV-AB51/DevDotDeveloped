@@ -1,0 +1,132 @@
+@import '../../styles/main.scss';
+
+.footer {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  a {
+    color: #e2e8f0;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+    padding-bottom: 2rem;
+    transition: border-color 0.3s ease;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-logo {
+    a {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: block;
+      color: #ffffff;
+    }
+
+    p {
+      color: var(--accent-color);
+      font-size: 1rem;
+    }
+  }
+
+  &-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+
+    &-column {
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        position: relative;
+        color: #ffffff;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          width: 40px;
+          height: 3px;
+          background-color: var(--primary-color);
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.75rem;
+
+          a {
+            display: inline-block;
+            transition: var(--transition);
+
+            &:hover {
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(226, 232, 240, 0.1);
+      border-radius: 50%;
+      font-size: 1.2rem;
+      transition: var(--transition);
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+} 
