@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import profileImage from '../../assets/images/profile-portrait.jpg';
-import './Hero.scss';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import profileImage from "../../assets/images/profile-portrait.jpg";
+import "./Hero.scss";
 
 const Hero: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -11,15 +11,15 @@ const Hero: React.FC = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
+
     // Initial check
     checkMobile();
-    
+
     // Add event listener for window resize
-    window.addEventListener('resize', checkMobile);
-    
+    window.addEventListener("resize", checkMobile);
+
     // Cleanup
-    return () => window.removeEventListener('resize', checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   return (
@@ -30,7 +30,10 @@ const Hero: React.FC = () => {
           <div className="hero-image-container">
             <div className="hero-image">
               <div className="image-container">
-                <img src={profileImage} alt="Devan Bailey - Full Stack Developer" />
+                <img
+                  src={profileImage}
+                  alt="Devan Bailey - Full Stack Developer"
+                />
               </div>
             </div>
           </div>
@@ -41,7 +44,8 @@ const Hero: React.FC = () => {
           </h1>
           <h2 className="hero-subtitle">Full Stack Developer</h2>
           <p className="hero-description">
-            I build beautiful, responsive, and user-friendly web applications using modern technologies.
+            I build scalable, responsive, and user-friendly web applications
+            using modern technologies.
           </p>
           <div className="hero-buttons">
             <Link to="/projects" className="btn">
@@ -56,7 +60,10 @@ const Hero: React.FC = () => {
           <div className="hero-image-container">
             <div className="hero-image">
               <div className="image-container">
-                <img src={profileImage} alt="Devan Bailey - Full Stack Developer" />
+                <img
+                  src={profileImage}
+                  alt="Devan Bailey - Full Stack Developer"
+                />
               </div>
             </div>
           </div>
@@ -70,4 +77,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

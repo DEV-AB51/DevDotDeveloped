@@ -63,33 +63,35 @@ const AboutPage: React.FC = () => {
       <div className="container">
         <div className="page-header">
           <h1>About Me</h1>
-          <p>Learn more about who I am and what I do</p>
+          <p>A brief summary of my professional background</p>
         </div>
 
         <div className="page-content">
           {/* Biography Section */}
           <section className="bio-section">
-            <h2>Biography</h2>
+            <h2>Profile</h2>
             <div className="bio-content">
               <p>
-                I am a full stack developer with a background in banking and
-                customer service. After four years at Capitec Bank—where I
-                specialized in complaint resolution, fraud investigations, and
-                working with regulators—I made the leap into tech to build
-                smarter, more user-friendly digital solutions. My tech stack
-                includes JavaScript, TypeScript, React, Node.js, and Express.js,
-                and I’m currently learning Java to deepen my backend skills.
-                I’ve built a CRM/appointment system and a sports betting app
-                that compares odds across major platforms—projects that reflect
-                both my technical ability and user-focused mindset. What makes
-                me unique as a developer is my understanding of both the user
-                and business sides of digital products, especially in finance.
-                That’s why I’m drawn to fintech—where I can merge my background
-                with my passion for problem-solving and innovation. I approach
-                development with curiosity and structure, aiming to build clean,
-                scalable systems that make people’s lives easier. Whether it’s
-                simplifying workflows or debugging a tricky feature, I love
-                turning ideas into real, functional tools.
+                I'm a full stack developer, based in Cape Town. I have strong
+                background in banking and customer service. After four years at
+                Capitec Bank, I made a transition into tech to build solutions
+                that enhance user-experiences. My stack includes JavaScript,
+                TypeScript, React, Node.js and Express. I have experience
+                working with Python, having obtained a certificate in Full Stack
+                Development through the FNB App Academy, buidling a strong
+                foundation in Python fundamentals. I am also expanding my
+                knowledge in cloud technologies, with a focus on AWS and Azure
+                services. I am drawn to fintech as its where my banking and
+                technical skills converge. I approach every project with
+                structure and curiousity, aiming to build scalable systems that
+                solve real world problems experiened by real people.
+              </p>
+              <p>
+                My goal is to grow as a developer, and to contribute to
+                meaningful projects. My background in high pressure support
+                environments has sharpened my communication, problem solving and
+                user empathy. Skills that I bring directly into how I think
+                about building software.
               </p>
             </div>
           </section>

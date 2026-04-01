@@ -1,5 +1,26 @@
 /* Variables */
+/* Dark theme (default) */
 :root {
+  --primary-color: #FF6B00;
+  --secondary-color: #ff8c00;
+  --accent-color: #ffad33;
+  --background-color: #111111;
+  --text-color: #f0f0f0;
+  --light-text-color: #ffffff;
+  --border-color: #2a2a2a;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+  --card-bg-color: #1a1a1a;
+  --hover-bg-color: rgba(255, 107, 0, 0.08);
+  --icon-dark-color: #ffffff;
+}
+
+/* Light theme */
+[data-theme="light"] {
   --primary-color: #0077b6;
   --secondary-color: #00b4d8;
   --accent-color: #90e0ef;
@@ -15,6 +36,7 @@
   --border-radius: 8px;
   --card-bg-color: #ffffff;
   --hover-bg-color: rgba(0, 119, 182, 0.05);
+  --icon-dark-color: #181717; 
 }
 
 /* Base Styles */
