@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+# Dev Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal developer portfolio showcasing projects, skills, and experience as a full-stack software engineer. It serves as a central hub for highlighting completed work, ongoing builds, and technical capabilities across frontend and backend development.
 
-## Available Scripts
+The portfolio is designed with performance, clarity, and clean UI/UX in mind.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Project showcase with detailed breakdowns
+* Skills and technology stack overview
+* Developer biography and background
+* Contact and social links
+* Responsive design across all devices
+* Fast load times with Vite optimization
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React
+* TypeScript (TSX)
+* SCSS
+* Vite
+* Vercel (Deployment)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Live Site
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This portfolio is currently live and accessible via the deployed Vercel link.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Purpose
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The portfolio is built to:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Present real-world project experience
+* Demonstrate full-stack development capability
+* Provide a central access point for recruiters and collaborators
+* Highlight technical depth beyond tutorials and coursework
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Architecture Overview
 
-## Learn More
+* React handles UI rendering and component structure
+* TypeScript ensures type safety and maintainable codebase
+* SCSS manages modular styling and design system
+* Vite provides fast bundling and development performance
+* Vercel handles CI/CD and deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Code Access
+
+This repository is publicly visible as part of a developer portfolio.
+
+However, selected projects linked from this portfolio may remain private depending on product and business considerations.
