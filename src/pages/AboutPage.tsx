@@ -78,7 +78,7 @@ const AboutPage: React.FC = () => {
                 that enhance user-experiences. My stack includes JavaScript,
                 TypeScript, React, Node.js and Express. I have experience
                 working with Python, having obtained a certificate in Full Stack
-                Development through the FNB App Academy, buidling a strong
+                Development through the FNB App Academy, building a strong
                 foundation in Python fundamentals. I am also expanding my
                 knowledge in cloud technologies, with a focus on AWS and Azure
                 services. I am drawn to fintech as its where my banking and
