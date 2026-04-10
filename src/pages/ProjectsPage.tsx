@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import "./PageStyles.scss";
 import "../styles/ProjectsPage.scss";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import ProjectStatus from "../components/ProjectStatus";
 import ChartNestHome from "../assets/images/ChartNestHome.png";
 import ChartNestHome2 from "../assets/images/ChartNestHome2.png";
 import ChartNestDashboard from "../assets/images/ChartNestDashboard.png";
+import ChartNestFeatures from "../assets/images/ChartNestFeatures.png";
+import ChartNestPricing from "../assets/images/ChartNestPricing.png";
+import ChartNestFAQ from "../assets/images/ChartNestFAQ.png";
 import ChartNestJournal from "../assets/images/ChartNestJournal.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -17,6 +21,9 @@ const chartNestImages = [
   { src: ChartNestHome2, alt: "ChartNest Home Page 2" },
   { src: ChartNestDashboard, alt: "ChartNest Dashboard" },
   { src: ChartNestJournal, alt: "ChartNest Journal" },
+  { src: ChartNestFeatures, alt: "ChartNest Features Page" },
+  { src: ChartNestPricing, alt: "ChartNest Pricing Page" },
+  { src: ChartNestFAQ, alt: "ChartNest FAQ Page" },
 ];
 
 const ProjectsPage: React.FC = () => {
@@ -31,10 +38,13 @@ const ProjectsPage: React.FC = () => {
         </div>
         <div className="page-content">
           <div className="projects-grid">
-            {/* Project 1 */}
+            {/* PathForge.com*/}
             <div className="project-card">
               <div className="project-header">
-                <h2>Appointment Booking & CRM Management System</h2>
+                <div className="project-title">
+                  <h2>PathForge.com</h2>
+                  <ProjectStatus status="in-progress" />
+                </div>
                 <div className="project-links">
                   <a
                     href="https://github.com/username/project1"
@@ -62,14 +72,17 @@ const ProjectsPage: React.FC = () => {
               <div className="project-description">
                 <h3>About this project</h3>
                 <p>
-                  A versatile SaaS solution built to streamline appointment
-                  scheduling and client management for businesses such as
-                  doctor's offices, dentists, salons, mechanics, and other
-                  service-based industries.
+                  PathForge is a career roadmap research platform where anyone,
+                  not just techies, can search any job title and get a
+                  structured, step-by-step roadmap into that career. Complete
+                  with free resources, skill requirements, certifications and
+                  salary expectations, it’s designed to help people make
+                  informed decisions about their career paths and upskilling
+                  journeys.
                 </p>
                 <p>
-                  <strong>Technologies used:</strong> React, Node.js, MongoDB,
-                  Express
+                  <strong>Technologies used:</strong> JavaScript, Next.js,
+                  Tailwind CSS, Supabase, PostgreSQL, Claude API, Vercel
                 </p>
               </div>
               <div className="project-video">
@@ -91,7 +104,10 @@ const ProjectsPage: React.FC = () => {
             {/* Project 2 */}
             <div className="project-card">
               <div className="project-header">
-                <h2>Betslip Comparison Tool</h2>
+                <div className="project-title">
+                  <h2>Betslip Comparison Tool</h2>
+                  <ProjectStatus status="in-progress" />
+                </div>
                 <div className="project-links">
                   <a
                     href="https://github.com/yourusername/project2"
@@ -146,7 +162,10 @@ const ProjectsPage: React.FC = () => {
             {/* Project 3 - ChartNest */}
             <div className="project-card">
               <div className="project-header">
-                <h2>ChartNest (FreeTradeZella Clone)</h2>
+                <div className="project-title">
+                  <h2>ChartNest.com</h2>
+                  <ProjectStatus status="in-progress" />
+                </div>
                 <div className="project-links">
                   <a
                     href="https://github.com/yourusername/project3"
@@ -198,8 +217,8 @@ const ProjectsPage: React.FC = () => {
                   profitability by setup.
                 </p>
                 <p>
-                  <strong>Technologies used:</strong> Next.js, Supabase, SQL,
-                  Stripe for Subscription Modeling
+                  <strong>Technologies used:</strong> TypeScript, Next.js,
+                  Supabase, PostgreSQL, Stripe Subscription Modeling, Vercel
                 </p>
               </div>
               <div className="project-video">

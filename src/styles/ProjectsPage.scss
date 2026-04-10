@@ -19,7 +19,7 @@
     border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
     transition: border-color 0.3s ease;
@@ -31,6 +31,24 @@
       margin: 0;
       transition: color 0.3s ease;
     }
+
+    .project-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .project-status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--text-color);
+    }
+  }
+
   }
 
   .project-links {
@@ -196,6 +214,42 @@
     .lightbox-next { right: 2rem; }
   }
 
+
+  .status-led {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--led-color);
+    position: relative;
+  
+    /* core glow */
+    box-shadow: 0 0 6px var(--led-color), 0 0 12px var(--led-color);
+  
+    /* subtle pulse animation */
+    animation: ledPulse 1.8s infinite ease-in-out;
+  }
+  
+  /* pulse effect */
+  @keyframes ledPulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 4px var(--led-color), 0 0 8px var(--led-color);
+      opacity: 0.9;
+    }
+  
+    50% {
+      transform: scale(1.15);
+      box-shadow: 0 0 10px var(--led-color), 0 0 20px var(--led-color);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 4px var(--led-color), 0 0 8px var(--led-color);
+      opacity: 0.9;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .project-header {
       flex-direction: column;
@@ -216,4 +270,3 @@
       padding: 1.5rem;
     }
   }
-}
