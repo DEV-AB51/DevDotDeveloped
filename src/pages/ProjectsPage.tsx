@@ -10,11 +10,24 @@ import ChartNestFeatures from "../assets/images/ChartNestFeatures.png";
 import ChartNestPricing from "../assets/images/ChartNestPricing.png";
 import ChartNestFAQ from "../assets/images/ChartNestFAQ.png";
 import ChartNestJournal from "../assets/images/ChartNestJournal.png";
+import PathForgeHome from "../assets/images/PathForgeHome.png";
+import PathForgeAll from "../assets/images/PathForgeAll.png";
+import PathForgeRoadmap from "../assets/images/PathForgeRoadmap.png";
+import PathForgeRoadmap2 from "../assets/images/PathForgeRoadmap2.png";
+import PathForgeRoadmap3 from "../assets/images/PathForgeRoadmap3.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+const pathForgeImages = [
+  { src: PathForgeHome, alt: "PathForge Home Page" },
+  { src: PathForgeAll, alt: "PathForge All Roadmaps Page" },
+  { src: PathForgeRoadmap, alt: "PathForge Roadmap Page" },
+  { src: PathForgeRoadmap2, alt: "PathForge Roadmap Page 2" },
+  { src: PathForgeRoadmap3, alt: "PathForge Roadmap Page 3" },
+];
 
 const chartNestImages = [
   { src: ChartNestHome, alt: "ChartNest Home Page" },
@@ -27,7 +40,10 @@ const chartNestImages = [
 ];
 
 const ProjectsPage: React.FC = () => {
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [lightbox, setLightbox] = useState<{
+    images: { src: string; alt: string }[];
+    index: number;
+  } | null>(null);
 
   return (
     <div className="page projects-page">
@@ -67,7 +83,28 @@ const ProjectsPage: React.FC = () => {
                 </div>
               </div>
               <div className="project-image">
-                <img src="/assets/project1.jpg" alt="Project 1 Screenshot" />
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  navigation
+                  pagination={{ clickable: true }}
+                  loop={true}
+                >
+                  {pathForgeImages.map((img, i) => (
+                    <SwiperSlide key={i}>
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        onClick={() =>
+                          setLightbox({
+                            images: pathForgeImages,
+                            index: i,
+                          })
+                        }
+                        style={{ cursor: "pointer" }}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
               <div className="project-description">
                 <h3>About this project</h3>
@@ -199,7 +236,12 @@ const ProjectsPage: React.FC = () => {
                       <img
                         src={img.src}
                         alt={img.alt}
-                        onClick={() => setLightboxIndex(i)}
+                        onClick={() =>
+                          setLightbox({
+                            images: chartNestImages,
+                            index: i,
+                          })
+                        }
                         style={{ cursor: "pointer" }}
                       />
                     </SwiperSlide>
@@ -241,29 +283,44 @@ const ProjectsPage: React.FC = () => {
       </div>
 
       {/* Lightbox */}
-      {lightboxIndex !== null && (
-        <div className="lightbox" onClick={() => setLightboxIndex(null)}>
+      {lightbox && (
+        <div className="lightbox" onClick={() => setLightbox(null)}>
           <button
             className="lightbox-prev"
             onClick={(e) => {
               e.stopPropagation();
-              setLightboxIndex(
-                (lightboxIndex - 1 + chartNestImages.length) %
-                  chartNestImages.length
+              setLightbox((prev) =>
+                prev
+                  ? {
+                      ...prev,
+                      index:
+                        (prev.index - 1 + prev.images.length) %
+                        prev.images.length,
+                    }
+                  : null
               );
             }}
           >
             &#8592;
           </button>
+
           <img
-            src={chartNestImages[lightboxIndex].src}
-            alt={chartNestImages[lightboxIndex].alt}
+            src={lightbox.images[lightbox.index].src}
+            alt={lightbox.images[lightbox.index].alt}
           />
+
           <button
             className="lightbox-next"
             onClick={(e) => {
               e.stopPropagation();
-              setLightboxIndex((lightboxIndex + 1) % chartNestImages.length);
+              setLightbox((prev) =>
+                prev
+                  ? {
+                      ...prev,
+                      index: (prev.index + 1) % prev.images.length,
+                    }
+                  : null
+              );
             }}
           >
             &#8594;
