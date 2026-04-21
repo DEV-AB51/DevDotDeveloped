@@ -1,13 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/Layout';
-import HomePage from './pages/HomePage';
-import CVPage from './pages/CVPage';
-import AboutPage from './pages/AboutPage';
-import ProjectsPage from './pages/ProjectsPage';
-import SocialsPage from './pages/SocialsPage';
-import ScrollToTop from './components/ScrollToTop';
-import './App.scss';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import HomePage from "./pages/HomePage";
+import CVPage from "./pages/CVPage";
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import SocialsPage from "./pages/SocialsPage";
+import ScrollToTop from "./components/ScrollToTop";
+import "./App.scss";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="socials" element={<SocialsPage />} />
         </Route>
       </Routes>
+      <Analytics />
     </Router>
   );
 }

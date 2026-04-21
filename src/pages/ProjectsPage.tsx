@@ -63,7 +63,7 @@ const ProjectsPage: React.FC = () => {
                 </div>
                 <div className="project-links">
                   <a
-                    href="https://github.com/username/project1"
+                    href="https://github.com/DEV-AB51"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-link github"
@@ -72,7 +72,7 @@ const ProjectsPage: React.FC = () => {
                     <span>GitHub</span>
                   </a>
                   <a
-                    href="https://project1-demo.com"
+                    href="https://pathforge-devdotdev.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-link live"
@@ -122,20 +122,6 @@ const ProjectsPage: React.FC = () => {
                   Tailwind CSS, Supabase, PostgreSQL, Claude API, Vercel
                 </p>
               </div>
-              <div className="project-video">
-                <h3>Video Demo</h3>
-                <div className="video-container">
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/VIDEO_ID_1"
-                    title="Project 1 Demo"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
             </div>
 
             {/* Project 2 */}
@@ -147,7 +133,7 @@ const ProjectsPage: React.FC = () => {
                 </div>
                 <div className="project-links">
                   <a
-                    href="https://github.com/yourusername/project2"
+                    href="https://github.com/DEV-AB51"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-link github"
@@ -167,7 +153,7 @@ const ProjectsPage: React.FC = () => {
                 </div>
               </div>
               <div className="project-image">
-                <img src="/assets/project2.jpg" alt="Project 2 Screenshot" />
+                <img src="/assets/project2.jpg" alt="SmartBet Screenshot" />
               </div>
               <div className="project-description">
                 <h3>About this project</h3>
@@ -180,20 +166,6 @@ const ProjectsPage: React.FC = () => {
                   Redux, Puppeteer, Redis, Stripe, PostgreSQL, Expo
                 </p>
               </div>
-              <div className="project-video">
-                <h3>Video Demo</h3>
-                <div className="video-container">
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/VIDEO_ID_2"
-                    title="Project 2 Demo"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
             </div>
 
             {/* Project 3 - ChartNest */}
@@ -205,7 +177,7 @@ const ProjectsPage: React.FC = () => {
                 </div>
                 <div className="project-links">
                   <a
-                    href="https://github.com/yourusername/project3"
+                    href="https://github.com/DEV-AB51"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-link github"
@@ -262,20 +234,6 @@ const ProjectsPage: React.FC = () => {
                   <strong>Technologies used:</strong> TypeScript, Next.js,
                   Supabase, PostgreSQL, Stripe Subscription Modeling, Vercel
                 </p>
-              </div>
-              <div className="project-video">
-                <h3>Video Demo</h3>
-                <div className="video-container">
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/VIDEO_ID_3"
-                    title="Project 3 Demo"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
               </div>
             </div>
           </div>
