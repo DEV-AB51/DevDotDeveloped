@@ -52,18 +52,6 @@ const TechStack: React.FC = () => {
       category: "frontend",
     },
     {
-      name: "JavaScript",
-      icon: <FaJs />,
-      color: "#F7DF1E",
-      category: "frontend",
-    },
-    {
-      name: "TypeScript",
-      icon: <SiTypescript />,
-      color: "#3178C6",
-      category: "frontend",
-    },
-    {
       name: "HTML5",
       icon: <FaHtml5 />,
       color: "#E34F26",
@@ -73,6 +61,18 @@ const TechStack: React.FC = () => {
       name: "CSS3",
       icon: <FaCss3Alt />,
       color: "#1572B6",
+      category: "frontend",
+    },
+    {
+      name: "JavaScript",
+      icon: <FaJs />,
+      color: "#F7DF1E",
+      category: "frontend",
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript />,
+      color: "#3178C6",
       category: "frontend",
     },
 

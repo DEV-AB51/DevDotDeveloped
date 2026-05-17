@@ -132,7 +132,7 @@ const CVPage: React.FC = () => {
                     opacity: 0.7,
                   }}
                 >
-                  2022 – 2024
+                  2022 – 2025
                 </span>
               </div>
               <p

@@ -42,7 +42,7 @@ const AboutPage: React.FC = () => {
       id: 3,
       title: "Complaints Management Officer",
       company: "Capitec Bank",
-      period: "2022 - 2024",
+      period: "2022 - 2025",
       description:
         "Handled escalated customer complaints and implemented process improvements. Collaborated with cross-functional teams to resolve systemic issues.",
       icon: <FaUserTie />,
@@ -55,6 +55,16 @@ const AboutPage: React.FC = () => {
       description:
         "Developing web applications using the MERN stack. Using design tools and frameworks to create responsive, user-friendly interfaces and robust backend systems.",
       icon: <FaLaptopCode />,
+    },
+
+    {
+      id: 5,
+      title: "Software Developer Student",
+      company: "UWC Future Innovations Lab",
+      period: "2026 - Present",
+      description:
+        "Enrolled in a full-time, industry-aligned software developer programme focused on C#, ASP.NET Core, Azure cloud services, Agile methodologies, and design thinking.",
+      icon: <FaBriefcase />,
     },
   ];
 
@@ -72,25 +82,24 @@ const AboutPage: React.FC = () => {
             <h2>Profile</h2>
             <div className="bio-content">
               <p>
-                I'm a full stack developer, based in Cape Town. I have strong
-                background in banking and customer service. After four years at
-                Capitec Bank, I made a transition into tech to build solutions
-                that enhance user-experiences. My stack includes JavaScript,
-                TypeScript, React, Node.js and Express. I have experience
-                working with Python, having obtained a certificate in Full Stack
-                Development through the FNB App Academy, building a strong
-                foundation in Python fundamentals. I am also expanding my
-                knowledge in cloud technologies, with a focus on AWS and Azure
-                services. I am drawn to fintech as its where my banking and
-                technical skills converge. I approach every project with
-                structure and curiousity, aiming to build scalable systems that
-                solve real world problems experiened by real people.
+                I'm a full stack developer based in Cape Town, currently
+                enrolled in the UWC Future Innovations Lab's software developer
+                programme, where I'm deepening my expertise in C#, ASP.NET Core,
+                and Azure Cloud services. I have a strong backround in banking
+                operations and service support, having spent five years at
+                Capitec Bank. I transitioned into tech to build software that
+                leverages my experience to solve real-world problems, and
+                enhance user experiences. My stack includes JavaScript,
+                TypeScript, React and Node.js with addtional experience in
+                Python, having obtained a certificate in Full Stack Development
+                through the FNB App Academy. I am drawn to fintech, as it's
+                where my technical skills and banking experience converge.
               </p>
               <p>
-                My goal is to grow as a developer, and to contribute to
+                My goal is to grow as a developer and to contribute to
                 meaningful projects. My background in high pressure support
-                environments has sharpened my communication, problem solving and
-                user empathy. Skills that I bring directly into how I think
+                environments has sharpened my communication, problem-solving and
+                user empathy, skills that I bring directly into how I think
                 about building software.
               </p>
             </div>
