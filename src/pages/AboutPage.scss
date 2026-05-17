@@ -118,7 +118,8 @@
         
         .timeline-content {
           padding: 20px;
-          background-color: black;
+          background-color: var(--card-bg-color);
+          color: var(--text-color);
           position: relative;
           border-radius: var(--border-radius);
           box-shadow: var(--box-shadow);
