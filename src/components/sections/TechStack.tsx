@@ -25,6 +25,7 @@ import {
   SiPostgresql,
   SiCisco,
   SiDotnet,
+  SiGooglecloud,
 } from "react-icons/si";
 import "./TechStack.scss";
 
@@ -39,7 +40,8 @@ interface TechItem {
     | "tools"
     | "other"
     | "learning"
-    | "cybersecurity";
+    | "cybersecurity"
+    | "cloud";
 }
 
 const TechStack: React.FC = () => {
@@ -161,8 +163,21 @@ const TechStack: React.FC = () => {
       color: "#512BD4",
       category: "learning",
     },
+    {
+      name: "Microsoft Azure",
+      icon: <FaMicrosoft />,
+      color: "#0078D4",
+      category: "learning",
+    },
 
-    ,
+    // Cloud
+    {
+      name: "Google Cloud",
+      icon: <SiGooglecloud />,
+      color: "#4285F4",
+      category: "cloud",
+    },
+
     // Cybersecurity
     {
       name: "Introduction to Cybersecurity",
@@ -260,6 +275,22 @@ const TechStack: React.FC = () => {
             <div className="tech-items">
               {techItems
                 .filter((item) => item.category === "learning")
+                .map((item, index) => (
+                  <div className="tech-item" key={index}>
+                    <div className="tech-icon" style={{ color: item.color }}>
+                      {item.icon}
+                    </div>
+                    <span className="tech-name">{item.name}</span>
+                  </div>
+                ))}
+            </div>
+          </div>
+
+          <div className="tech-category">
+            <h3>Cloud</h3>
+            <div className="tech-items">
+              {techItems
+                .filter((item) => item.category === "cloud")
                 .map((item, index) => (
                   <div className="tech-item" key={index}>
                     <div className="tech-icon" style={{ color: item.color }}>

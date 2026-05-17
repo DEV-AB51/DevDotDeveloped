@@ -106,6 +106,73 @@ const CVPage: React.FC = () => {
               }}
             ></div>
 
+            {/* UWC FIL */}
+            <div style={{ marginBottom: "1.75rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "flex-start",
+                  marginBottom: "0.25rem",
+                }}
+              >
+                <h4
+                  style={{
+                    color: "var(--text-color)",
+                    fontSize: "1rem",
+                    fontWeight: 600,
+                  }}
+                >
+                  Software Developer Student
+                </h4>
+                <span
+                  style={{
+                    color: "var(--text-color)",
+                    fontSize: "0.85rem",
+                    opacity: 0.7,
+                  }}
+                >
+                  2025 – Present
+                </span>
+              </div>
+              <p
+                style={{
+                  color: "var(--primary-color)",
+                  fontSize: "0.9rem",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Samsung Future Innovations Lab, University of the Western Cape
+              </p>
+              <ul
+                style={{
+                  color: "var(--text-color)",
+                  fontSize: "0.9rem",
+                  lineHeight: 1.8,
+                  paddingLeft: "1.25rem",
+                }}
+              >
+                <li>
+                  Building proficiency in C# and ASP.NET Core, with a focus on
+                  object-oriented programming and enterprise application
+                  development.
+                </li>
+                <li>
+                  Gaining hands-on experience with Microsoft Azure cloud
+                  services, including deployment, storage, and AI integrations.
+                </li>
+                <li>
+                  Practicing Agile methodologies and design thinking principles
+                  through collaborative, project-based learning.
+                </li>
+                <li>
+                  Applying digital social innovation principles to design and
+                  build technology-driven solutions that address real-world
+                  societal challenges.
+                </li>
+              </ul>
+            </div>
+
             {/* Job 1 */}
             <div style={{ marginBottom: "1.75rem" }}>
               <div
